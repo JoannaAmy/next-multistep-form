@@ -49,41 +49,44 @@ export default function ThirdStep() {
       <CustomTextField
         value="reason"
         label="Why do you need this scholarship?"
-         rows={12}
+        rows={12}
       />
- <div className="button">
 
-      <Button
-        variant="contained"
-        color="secondary"
-        onClick={() => router.push("/form/step2")}
-      >
-        Back
-      </Button>
+      <div className="button-three">
+        <div className="top-btn">
 
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          handleFixErrors();
-        }}
-        disabled={!hasErrors}
-      >
-        Fix Errors
-      </Button>
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={() => router.push("/form/step2")}
+        >
+          Back
+        </Button>
 
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          router.push("/finish");
-          resetForm();
-        }}
-        disabled={isFormIncomplete() || hasErrors}
-      >
-        Submit
-      </Button>
- </div>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            handleFixErrors();
+          }}
+          disabled={!hasErrors}
+        >
+          Fix Errors
+        </Button>
+        </div>
+
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => {
+            router.push("/finish");
+            resetForm();
+          }}
+          disabled={isFormIncomplete() || hasErrors}
+        >
+          Submit
+        </Button>
+      </div>
     </>
   );
 }

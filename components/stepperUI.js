@@ -17,7 +17,8 @@ export default function StepperUI() {
 
   return (
     <Stepper
-      style={{ width: "70%", marginBottom: "3rem", placeSelf: 'center' }}
+      // style={{ width: "70%", marginBottom: "3rem", placeSelf: 'center' }}
+      className="stepper"
       activeStep={activeStep}
       orientation="horizontal"
       alternativeLabel
